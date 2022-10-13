@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jkusda/Reusables/reusable.dart';
 import 'package:jkusda/screens/navigation.dart';
-import 'package:jkusda/screens/signin.dart';
-import 'package:jkusda/screens/signup.dart';
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);
 
@@ -42,22 +40,21 @@ class _homePageState extends State<homePage> {
             padding: EdgeInsets.fromLTRB(
               20, MediaQuery.of(context).size.height*0.2,20,0),
             child:Column(
-              children: <Widget>[
+              children: [
                 logoWidget('assets/imgs/logo.png'),
                 Text('JKUSDA CHURCH',
                   style: const TextStyle(
-                  color: Colors.black, fontWeight:FontWeight.bold, fontSize:18
-                ),),
-                
+                    color: Colors.black, fontWeight:FontWeight.bold, fontSize:18
+                  ),
+                ),
                 SizedBox(
                   height: 20,
                 ),
-                Text("Welcome to SDA Church Jomo Kenyatta University \n Home away from Home.",
+                Text('Jomo Kenyatta University Seventh Day Adventist Church is a nwarm Christian fellowship of professionals and university students who live to glorify God through the power of influence by leading all to behold His wonderful love.',
                   style: const TextStyle(
-                    color: Colors.white, fontSize:14
-                    ),
-                ),
-                
+                    color: Colors.white, fontSize:14,
+                  ),
+                )
               ],
             ),
           ),
