@@ -9,6 +9,7 @@ Image logoWidget(String imageName){
       color: Colors.white,
     );
   }
+  
 TextField textField(String text, IconData icon, bool isPassword, TextEditingController controller){
   return TextField(
     controller: controller,
@@ -62,5 +63,55 @@ Container signButton(BuildContext context, bool isLogin, Function onTap){
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
       )),
     ),
+  );
+}
+Container Boxit(BuildContext context, String text, Function onTap){
+  return Container(
+    height: 100,
+    width:100,
+    margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+    child: ElevatedButton(
+      onPressed: (){
+        onTap();
+      },
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.black87, fontWeight:FontWeight.bold, fontSize:16
+        ),
+      ),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith((states){
+        if(states.contains(MaterialState.pressed)){
+          return Colors.black26;
+        }
+        return Colors.white;
+      }),
+      ),
+    ),
+  );
+}
+Row landing(Function onClick){
+  return Row(
+    mainAxisAlignment:MainAxisAlignment.center,
+    children: [
+      Column(
+        children: [
+          Icon(Icons.lock_open_outlined, size: 50,),
+          Text('Login')
+        ],
+      ),
+      Column(
+
+        
+      ),
+      Column(
+        children: [
+          Icon(Icons.person_outlined, size: 50),
+          Text("Register")
+          
+        ],
+      )
+    ] ,
   );
 }

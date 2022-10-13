@@ -63,7 +63,7 @@ class _SigninState extends State<Signin> {
     );
   }
 
-  Row  signupOption(){
+  Row signupOption(){
     return Row(
       mainAxisAlignment:MainAxisAlignment.center,
       children: [
