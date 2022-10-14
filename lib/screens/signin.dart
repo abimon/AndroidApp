@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jkusda/Reusables/reusable.dart';
+import 'package:jkusda/screens/navigation.dart';
 import 'package:jkusda/screens/signup.dart';
 class Signin extends StatefulWidget {
   const Signin({Key? key}) : super(key: key);
@@ -14,6 +15,18 @@ class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Stack(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                navBar(),
+              ],
+            ),
+          ],
+        )
+      ),
       body:Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,

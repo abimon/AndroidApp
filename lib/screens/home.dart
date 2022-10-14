@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jkusda/Reusables/reusable.dart';
 import 'package:jkusda/screens/navigation.dart';
+import 'package:jkusda/screens/signin.dart';
+import 'package:jkusda/screens/signup.dart';
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);
 
@@ -54,7 +56,73 @@ class _homePageState extends State<homePage> {
                   style: const TextStyle(
                     color: Colors.white, fontSize:14,
                   ),
-                )
+                ),
+                
+                SizedBox(height: 5,),
+                Container(
+                  width:MediaQuery.of(context).size.width,
+                  height: 50,
+                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(90)),
+                  child: ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()));
+                    },
+                    child: Text(
+                      'LOG IN',
+                      style: const TextStyle(
+                        color: Colors.black87, fontWeight:FontWeight.bold, fontSize:16
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith((states){
+                      if(states.contains(MaterialState.pressed)){
+                        return Colors.black26;
+                      }
+                      return Colors.white;
+                    }),
+                    shape:MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                    )),
+                  ),
+                ),
+                SizedBox(height:5),
+                Container(
+                  width:MediaQuery.of(context).size.width,
+                  height: 50,
+                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(90)),
+                  child: ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>signup()));
+                    },
+                    child: Text(
+                      'SIGN UP',
+                      style: const TextStyle(
+                        color: Colors.black87, fontWeight:FontWeight.bold, fontSize:16
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith((states){
+                      if(states.contains(MaterialState.pressed)){
+                        return Colors.black26;
+                      }
+                      return Colors.white;
+                    }),
+                    shape:MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                    )),
+                  ),
+                ),
+                
+                /*signButton(context, false, (){
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>signup()));
+                    }
+                  );
+                })*/
+
               ],
             ),
           ),
@@ -62,4 +130,5 @@ class _homePageState extends State<homePage> {
       ),
     );
   }
+  
 }

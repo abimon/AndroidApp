@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jkusda/Reusables/reusable.dart';
+import 'package:jkusda/screens/navigation.dart';
 import 'package:jkusda/screens/signin.dart';
 class signup extends StatefulWidget {
   const signup({Key? key}) : super(key: key);
@@ -14,6 +15,18 @@ class _signupState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Stack(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                navBar(),
+              ],
+            ),
+          ],
+        )
+      ),
       body:Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -76,7 +89,7 @@ class _signupState extends State<signup> {
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()));
           },
-          child: const Text(" Log in", style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold),
+          child: const Text("Log in", style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold),
           ),
         )
       ],
