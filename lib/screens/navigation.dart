@@ -25,15 +25,15 @@ class _navBarState extends State<navBar> {
           child: Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(color: selected ==index 
-            ?Colors.white
-            :Colors.black.withOpacity(0.6),
-            borderRadius:BorderRadius.circular(12),
-            border: Border.all(
-              color: selected ==index 
-            ?Colors.black
-            :Colors.white,
-            )),
-            
+              ?Colors.white
+              :Colors.black.withOpacity(0.6),
+              borderRadius:BorderRadius.circular(12),
+              border: Border.all(
+                  color: selected ==index 
+                ?Colors.black
+                :Colors.white,
+              )
+            ),
             child: Text(navs[index],
               style: TextStyle(
                 fontSize: 14,
@@ -41,6 +41,7 @@ class _navBarState extends State<navBar> {
                     ?Colors.black
                     :Colors.white
               ),
+              
             ),
           ),
         ), 

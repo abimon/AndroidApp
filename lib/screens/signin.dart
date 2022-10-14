@@ -55,7 +55,7 @@ class _SigninState extends State<Signin> {
                     textField("Enter Username", Icons.person_outline, false, _emailTextController
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
                     textField("Enter Password", Icons.lock_outline, true, _passwordTextController
                     ),

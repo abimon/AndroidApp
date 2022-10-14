@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jkusda/Reusables/reusable.dart';
+import 'package:jkusda/screens/about.dart';
 import 'package:jkusda/screens/navigation.dart';
 import 'package:jkusda/screens/signin.dart';
 import 'package:jkusda/screens/signup.dart';
@@ -40,26 +41,34 @@ class _homePageState extends State<homePage> {
         child:SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.fromLTRB(
-              20, MediaQuery.of(context).size.height*0.2,20,0),
+              20, 5,20,0),
             child:Column(
               children: [
                 logoWidget('assets/imgs/logo.png'),
                 Text('JKUSDA CHURCH',
                   style: const TextStyle(
-                    color: Colors.black, fontWeight:FontWeight.bold, fontSize:18
+                    color: Colors.white, fontWeight:FontWeight.bold, fontSize:18
                   ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Jomo Kenyatta University Seventh Day Adventist Church is a nwarm Christian fellowship of professionals and university students who live to glorify God through the power of influence by leading all to behold His wonderful love.',
+                Text('Welcome',
+                  style: const TextStyle(
+                    color: Colors.black, fontWeight:FontWeight.bold, fontSize:18
+                  ),
+                ),
+                Divider(color: Colors.black,),
+                Text('Jomo Kenyatta University Seventh Day Adventist Church is a warm Christian fellowship of professionals and university students who live to glorify God through the power of influence by leading all to behold His wonderful love.',
                   style: const TextStyle(
                     color: Colors.white, fontSize:14,
                   ),
                 ),
-                
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>aboutus()));
+                } , child: Text('About Us >')),
                 SizedBox(height: 5,),
-                Container(
+                /*Container(
                   width:MediaQuery.of(context).size.width,
                   height: 50,
                   margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
@@ -69,7 +78,7 @@ class _homePageState extends State<homePage> {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()));
                     },
                     child: Text(
-                      'LOG IN',
+                      'Bible',
                       style: const TextStyle(
                         color: Colors.black87, fontWeight:FontWeight.bold, fontSize:16
                       ),
@@ -97,7 +106,7 @@ class _homePageState extends State<homePage> {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>signup()));
                     },
                     child: Text(
-                      'SIGN UP',
+                      'Hymnal',
                       style: const TextStyle(
                         color: Colors.black87, fontWeight:FontWeight.bold, fontSize:16
                       ),
@@ -114,7 +123,7 @@ class _homePageState extends State<homePage> {
                     )),
                   ),
                 ),
-                
+                */
                 /*signButton(context, false, (){
                   GestureDetector(
                     onTap: (){
@@ -122,7 +131,11 @@ class _homePageState extends State<homePage> {
                     }
                   );
                 })*/
-
+                Row(
+                  children: [
+                    
+                  ],
+                )
               ],
             ),
           ),
