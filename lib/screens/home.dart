@@ -28,6 +28,7 @@ class _homePageState extends State<homePage> {
         )
       ),
       body:
+
       Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -44,6 +45,26 @@ class _homePageState extends State<homePage> {
               20, 5,20,0),
             child:Column(
               children: [
+                Row(
+                  mainAxisAlignment:MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>signup()));
+                      },
+                      child: const Text("Sign Up", style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()));
+                      },
+                      child: const Text("Sign In", style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
                 logoWidget('assets/imgs/logo.png'),
                 Text('JKUSDA CHURCH',
                   style: const TextStyle(
@@ -133,7 +154,7 @@ class _homePageState extends State<homePage> {
                 })*/
                 Row(
                   children: [
-                    
+
                   ],
                 )
               ],
