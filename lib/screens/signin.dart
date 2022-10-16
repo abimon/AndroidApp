@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jkusda/Reusables/reusable.dart';
-import 'package:jkusda/screens/navigation.dart';
-import 'package:jkusda/screens/signup.dart';
+import 'package:JKUSDA/Reusables/reusable.dart';
+import 'package:JKUSDA/screens/navigation.dart';
+import 'package:JKUSDA/screens/signup.dart';
 class Signin extends StatefulWidget {
   const Signin({Key? key}) : super(key: key);
 

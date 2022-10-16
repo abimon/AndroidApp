@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:jkusda/Reusables/reusable.dart';
-import 'package:jkusda/screens/about.dart';
-import 'package:jkusda/screens/navigation.dart';
-import 'package:jkusda/screens/signin.dart';
-import 'package:jkusda/screens/signup.dart';
+import 'package:JKUSDA/Reusables/reusable.dart';
+import 'package:JKUSDA/screens/about.dart';
+import 'package:JKUSDA/screens/navigation.dart';
+import 'package:JKUSDA/screens/signin.dart';
+import 'package:JKUSDA/screens/signup.dart';
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);
 

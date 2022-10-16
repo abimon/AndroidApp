@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jkusda/screens/home.dart';
-import 'package:jkusda/screens/signup.dart';
+import 'package:JKUSDA/screens/home.dart';
 void main() {
   runApp(const MyApp());
 }

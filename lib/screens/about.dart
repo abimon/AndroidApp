@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jkusda/Reusables/reusable.dart';
-import 'package:jkusda/screens/navigation.dart';
+import 'package:JKUSDA/Reusables/reusable.dart';
+import 'package:JKUSDA/screens/navigation.dart';
 
 class aboutus extends StatefulWidget {
   const aboutus({Key? key}) : super(key: key);
